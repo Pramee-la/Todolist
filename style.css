@@ -1,0 +1,218 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #96b6eb;
+    color: #EEE;
+    
+}
+
+/* Header styles */
+header {
+    padding: 2rem 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    margin-bottom: 1rem;
+    color:white;
+}
+
+#new_task_form {
+    display: flex;
+}
+
+#new_task_input {
+    padding: 1rem;
+    width: 70%;
+    font-size: 1.2rem;
+    background-color: #1F2937;
+    color: #E5E7EB;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    border: none;
+}
+
+#new_task_input::placeholder {
+    color: #9CA3AF;
+}
+
+#new_task_submit {
+    color: black; /* Light blue color */
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: rgb(238, 229, 229);
+    border: 2px solid #205799; /* Light blue border */
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    text-transform: uppercase;
+  
+}
+#new_task_submit:hover{
+    background-color: rgb(181, 181, 202);
+}
+
+/* Task list styles */
+.task_list {
+    padding: 1.2rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.task_list h2 {
+    margin-bottom: 1rem;
+    color: white; /* Light gray for better readability */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#task .task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+    font-size: 1rem;
+    background-color: #1F2937;
+    border-radius: 12px;
+    margin-top: 1.2rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content .text {
+    color:  #E5E7EB;
+    font-size: 1.1rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    background: none;
+    border: none;
+}
+
+.content .text:not(:read-only) {
+    color: #60A5FA;
+    border: none;
+}
+
+.task.completed .text {
+    text-decoration: line-through;
+    color: #6B7280;
+}
+#task .task .content .text {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    outline: none; /* Removes the outline when the input is focused */
+}
+
+#task .task .content .text:focus {
+    border: none; /* Ensures no border appears when focused */
+    outline: none; /* Ensures no outline appears when focused */
+}
+
+
+.actions {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.actions button {
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+    border: none;
+    background: none;
+    color: #60A5FA;
+}
+
+.actions button:hover {
+    opacity: .8;
+}
+
+.actions button:active {
+    opacity: .6;
+}
+
+.actions .edit {
+    color: #60A5FA;
+}
+
+.actions .dlt {
+    color: #EF4444;
+}
+
+.task .checkbox {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+}
+/* Add this CSS for date styling */
+
+
+.checkbox {
+    width: 1.5rem; /* Adjust size as needed */
+    height: 1.5rem; /* Adjust size as needed */
+    margin-right: 1rem;
+}
+
+
+
+
+/* Add this CSS for completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: gray; /* Optional: Change color to indicate completion */
+}
+
+/* Checkbox styling */
+.checkbox {
+    width: 1.5rem; /* Adjust size as needed */
+    height: 1.5rem; /* Adjust size as needed */
+    margin-right: 1rem;
+}
+
+/* Task text input styling */
+#task .task .content .text {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    outline: none; /* Removes the outline when the input is focused */
+}
+
+/* Removes the border when input is focused */
+#task .task .content .text:focus {
+    border: none; /* Ensures no border appears when focused */
+    outline: none; /* Ensures no outline appears when focused */
+}
+
+
+/* Date styling */
+.date {
+    color: #60A5FA;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
